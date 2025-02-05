@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/tu-repositorio/static/css/main.e6c13ad2.css",
+    "main.js": "/tu-repositorio/static/js/main.4c1640e3.js",
+    "index.html": "/tu-repositorio/index.html",
+    "main.e6c13ad2.css.map": "/tu-repositorio/static/css/main.e6c13ad2.css.map",
+    "main.4c1640e3.js.map": "/tu-repositorio/static/js/main.4c1640e3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.4c1640e3.js"
+  ]
+}
