@@ -1,0 +1,14 @@
+.ToDoCounter-Title {
+    margin: auto;
+    font-size: 35px;
+    font-weight: bold;
+    background: -webkit-linear-gradient(45deg,var(--violeta), var(--naranja), var(--rosado-persa));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.ToDoCounter-Subtitle {
+    margin: auto;
+    font-size: 20px;
+    font-weight: bold;
+}

@@ -1,3 +1,14 @@
+:root{
+  --celeste: #00B7FF;
+  --violeta: #7389E7;
+  --fucsia: #F60ED7;
+  --amarillo: #F7E61D;
+  --rosado: #E79DD0;
+  --rosado-persa: #F736AA;
+  --verde: #69dc8a;
+  --naranja: #faaa15;
+}
+
 body {
   background-size: 100%;
   height: 100vh;
@@ -235,9 +246,10 @@ body {
   background-blend-mode: normal, normal, normal, normal, normal;
 }
 
-@media (min-width: 412px) {
+@media (min-width: 312px) {
   body {
     background-size: cover;
+    height: 100vh;
   }
 
   .app {
@@ -246,19 +258,19 @@ body {
   }
 
   .newItem {
-    height: 30vh !important;
+    height: 25vh !important;
     max-width: 300px;
     min-height: 200px;
     display: flex !important; 
     flex-direction: column;
     justify-content: space-between;
-
+    margin: 5px;
     max-width: 500px;
     padding: 35px;
 
     border: 1px solid rgba(255, 255, 255, .25);
     border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.45) !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
 
     backdrop-filter: blur(15px);
@@ -266,19 +278,19 @@ body {
 
   .ListadoTodos {
     width: 100%;
-    height: auto;
+    height: 58vh !important;
     max-width: 300px;
     min-height: 200px;
     display: flex !important;
     flex-direction: column;
     justify-content: space-between;
-    margin-top: 5px;
+    margin: 5px;
     max-width: 500px;
     padding: 35px;
 
     border: 1px solid rgba(255, 255, 255, .25);
     border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.45) !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
 
     backdrop-filter: blur(15px);
@@ -311,12 +323,4 @@ body {
   width: auto;
   height: 70vh;
   padding: 20px 50px;
-}
-
-.newToDoInput {
-  width: 80%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
 }

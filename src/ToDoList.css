@@ -9,7 +9,7 @@
     /* Habilita el scroll vertical cuando el contenido sea mayor */
     overflow-x: hidden;
     /* Evita el scroll horizontal innecesario */
-    border: 1px solid #ccc;
+    border: 0;
     /* Opcional: para visualizar los bordes */
-    padding: 20px 50px;
+    padding-inline-start: 0%;
 }

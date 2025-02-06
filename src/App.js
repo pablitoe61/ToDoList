@@ -20,10 +20,8 @@ function App() {
         <NewToDo />
       </div>
       <div className="ListadoTodos">
-        <h1>Tus Tareas</h1>
         <ToDoCounter />
         <ToDoSearch />
-
         <ToDoList>
           {todos.map(todo => (
             <ToDoItem key={todo.text} text={todo.text} completed={todo.completed} />

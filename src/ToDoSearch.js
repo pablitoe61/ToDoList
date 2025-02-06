@@ -1,9 +1,13 @@
 import "./ToDoSearch.css";
 
+
 function ToDoSearch() {
   return (
-    <input className="ToDoSearch"
+    <>
+    <input className="ToDoSearch "
      placeholder="Buscar Tarea..." />
+    </>
+    
   );
 }
 

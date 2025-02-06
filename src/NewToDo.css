@@ -1,0 +1,30 @@
+@media (min-width: 212px) {
+    .NewToDo-Title {
+        margin: 0 auto;
+        font-size: 35px;
+        font-weight: bold;
+        background: -webkit-linear-gradient(35deg,var(--violeta), var(--rosado-persa));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        
+    }
+    .NewToDo-Input {
+        width: 100% !important;
+    }
+}
+.NewToDoInput {
+    width: 80%;
+    padding: 10px;
+    margin: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+.NewToDo-Input:focus {
+    outline: none; 
+  }
+
+  .NewToDo-p{
+    margin: 0 auto;
+  }
