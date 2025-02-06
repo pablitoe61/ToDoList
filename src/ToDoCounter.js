@@ -1,9 +1,9 @@
 
 function ToDoCounter({ total, completed}) {
   return (
-    <h1>
+    <h2 className="ToDoCounter">
       Has completado {completed} de {total} ToDos
-    </h1>
+    </h2>
   );
 }
 

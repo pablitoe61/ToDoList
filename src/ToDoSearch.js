@@ -1,7 +1,9 @@
+import "./ToDoSearch.css";
 
 function ToDoSearch() {
   return (
-    <input placeholder="Cebolla" />
+    <input className="ToDoSearch"
+     placeholder="Buscar Tarea..." />
   );
 }
 

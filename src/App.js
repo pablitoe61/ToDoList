@@ -2,10 +2,11 @@ import { ToDoCounter } from './ToDoCounter';
 import { ToDoSearch } from './ToDoSearch';
 import { ToDoList } from './ToDoList';
 import { ToDoItem } from './ToDoItem';
-import { CreateToDoButton } from './CreateToDoButton';
+import { NewToDo } from './NewToDo';
+import './App.css';
 
 const todos = [
-  { text: 'Cortar cebolla', completed: false },
+  { text: 'Cortar cebolla', completed: true },
   { text: 'Tomar el curso de intro a React', completed: false },
   { text: 'Escuchar musica', completed: false },
   { text: 'Lala', completed: false },
@@ -14,16 +15,22 @@ const todos = [
 function App() {
   return (
     <>
-    <ToDoCounter />
-      <ToDoSearch />
+    <div className="app">
+      <div className="newItem">
+        <NewToDo />
+      </div>
+      <div className="ListadoTodos">
+        <h1>Tus Tareas</h1>
+        <ToDoCounter />
+        <ToDoSearch />
 
-      <ToDoList>
-        {todos.map(todo => (
-          <ToDoItem key={todo.text} text={todo.text} completed={todo.completed} />
-        ))}
-      </ToDoList>
-
-      <CreateToDoButton />
+        <ToDoList>
+          {todos.map(todo => (
+            <ToDoItem key={todo.text} text={todo.text} completed={todo.completed} />
+          ))}
+        </ToDoList>
+      </div>
+    </div>
     </>
   );
 }
