@@ -5,7 +5,9 @@ function ToDoSearch() {
   return (
     <>
     <input className="ToDoSearch "
-     placeholder="Buscar Tarea..." />
+     placeholder="Buscar Tarea..." 
+     onChange={event => console.log(event.target)}
+     />
     </>
     
   );

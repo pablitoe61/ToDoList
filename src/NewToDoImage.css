@@ -1,0 +1,8 @@
+.ToDoImage{
+    width: 90%;
+}
+@media (max-width: 650px) {
+    .ToDoImage{
+        display: none;
+    }
+}
