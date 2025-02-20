@@ -1,12 +1,16 @@
+import React from "react";
 import "./ToDoSearch.css";
 
+function ToDoSearch({ searchValue, setSearchValue }) {
 
-function ToDoSearch() {
   return (
     <>
     <input className="ToDoSearch "
      placeholder="Buscar Tarea..." 
-     onChange={event => console.log(event.target)}
+     value={searchValue}
+     onChange={event => 
+      setSearchValue(event.target.value)
+     }
      />
     </>
     

@@ -8,7 +8,7 @@ function ToDoCounter({ total, completed }) {
         Tus Tareas
       </h1>
       <h2 className="ToDoCounter-Subtitle">
-        Has completado 8{completed} de 10{total} Tareas
+        Has completado {completed} de {total} Tareas
       </h2>
     </div>
     </>

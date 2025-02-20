@@ -5,8 +5,9 @@ import { ToDoItem } from './ToDoItem';
 import { NewToDo } from './NewToDo';
 import { NewToDoImage } from './NewToDoImage';
 import './App.css';
+import React from 'react';
 
-const todos = [
+const defaultTodos = [
   { text: 'Cortar cebolla', completed: true },
   { text: 'Tomar el curso de intro a React', completed: true },
   { text: 'Escuchar musica', completed: false },
@@ -14,6 +15,15 @@ const todos = [
 ];
 
 function App() {
+  const [todos, setTodos] = React.useState(defaultTodos);
+  const [searchValue, setSearchValue] = React.useState("");
+  const completedTodos = todos.filter(
+    todo => !!todo.completed
+  ).length;
+  const totalTodos = 10;
+
+  console.log('Los usuarios buscaron: ' + searchValue);
+
   return (
     <>
     <div className="app">
@@ -22,11 +32,18 @@ function App() {
         <NewToDoImage />
       </div>
       <div className="ListadoTodos">
-        <ToDoCounter />
-        <ToDoSearch />
+        <ToDoCounter completed={completedTodos} total={totalTodos} />
+        <ToDoSearch 
+        searchValue={searchValue}
+        setSearchValue={setSearchValue}
+        />
         <ToDoList>
-          {todos.map(todo => (
-            <ToDoItem key={todo.text} text={todo.text} completed={todo.completed} />
+          {defaultTodos.map(todo => (
+            <ToDoItem 
+            key={todo.text} 
+            text={todo.text} 
+            completed={todo.completed} 
+            />
           ))}
         </ToDoList>
       </div>
