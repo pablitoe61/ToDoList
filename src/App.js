@@ -10,8 +10,9 @@ import React from 'react';
 const defaultTodos = [
   { text: 'Cortar cebolla', completed: true },
   { text: 'Tomar el curso de intro a React', completed: true },
-  { text: 'Escuchar musica', completed: false },
+  { text: 'Escuchar música', completed: false },
   { text: 'Lala', completed: false },
+  { text: 'Lele', completed: false },
 ];
 
 function App() {
@@ -20,7 +21,16 @@ function App() {
   const completedTodos = todos.filter(
     todo => !!todo.completed
   ).length;
-  const totalTodos = 10;
+  const totalTodos = todos.length;
+
+  const searchedTodos = todos.filter(
+    (todo) => {
+      const normalizeText = (text) => text.normalize('NFD').replace(/[\u0300-\u036f]/g, "");      const todoText = normalizeText(todo.text.toLowerCase());
+      const searchText = normalizeText(searchValue.toLowerCase());
+      return todoText.includes
+      (searchText);
+    }
+  )
 
   console.log('Los usuarios buscaron: ' + searchValue);
 
@@ -40,7 +50,7 @@ function App() {
         setSearchValue={setSearchValue}
         />
         <ToDoList>
-          {defaultTodos.map(todo => (
+          {searchedTodos.map(todo => (
             <ToDoItem 
             key={todo.text} 
             text={todo.text} 
