@@ -32,7 +32,9 @@ function App() {
         <NewToDoImage />
       </div>
       <div className="ListadoTodos">
-        <ToDoCounter completed={completedTodos} total={totalTodos} />
+        <ToDoCounter 
+        completed={completedTodos} 
+        total={totalTodos} />
         <ToDoSearch 
         searchValue={searchValue}
         setSearchValue={setSearchValue}
