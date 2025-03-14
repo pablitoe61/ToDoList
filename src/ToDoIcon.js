@@ -1,17 +1,22 @@
 import {ReactComponent as IconCheck} from './completeIcon.svg';
-import {ReactComponent as IconDelete} from './DeleteIcon.svg';
+import {ReactComponent as IconDelete} from './delete.svg';
+import './ToDoIcon.css';
 
 const iconTypes = {
-    delete: <IconDelete/>,
-    check: <IconCheck/>,
+    "delete": (color) => <IconDelete 
+    className="Icon-svg" fill={color}/>,
+    "check": (color) => <IconCheck 
+    className="Icon-svg" fill={color}/>,
 };
 
-function ToDoIcon({type}){
+function ToDoIcon({type, color, onClick}) {
     return(
         <span
-        className={`Icon Icon-svg Icon-${type}`}
+            className={`Icon-container 
+            Icon-container-${type}`}
+            onClick={onClick}
         >
-            {iconTypes[type]}
+            {iconTypes[type](color)}
         </span>
     )
 }
